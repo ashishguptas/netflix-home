@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.app{
+  background-color: #111111;
+}
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after{
+  color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.swiper-button-prev {
+  left: 0px !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.swiper-button-next{
+  right: 0px !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.swiper-button-next, .swiper-button-prev {
+    position: absolute !important;
+    top: 22px !important;
+    height: 100% !important; 
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 999999;
+    opacity: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#000), color-stop(rgba(12,17,27,0.7)), to(rgba(12,17,27,0.9))) !important;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.37), rgba(12,17,27,0.7), rgba(12,17,27,0.9)) !important;
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.37), rgba(12,17,27,0.7), rgba(12,17,27,0.9)) !important;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.37), rgba(12,17,27,0.7), rgba(12,17,27,0.9)) !important;
+    -webkit-transition: opacity 0.6s ease-out;
+    -o-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
 }
-
-.App-link {
-  color: #61dafb;
+.row_posters:hover .swiper-button-next, .row_posters:hover .swiper-button-prev{
+  opacity: 1;
+  height: 100% !important;
+  top: 22px !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.swiper-button-disabled {
+  display: none !important;
+}
+.swiper-button-prev:after, .swiper-button-next:after{
+  font-size: 30px !important;
 }
